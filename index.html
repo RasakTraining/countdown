@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rasak Training Countdown</title>
+
+<style>
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #0f2a5f, #1e3c8a);
+  color: white;
+  text-align: center;
+}
+
+.container {
+  max-width: 420px;
+  margin: 20px auto;
+  padding: 20px;
+  background: rgba(255,255,255,0.05);
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+
+.small {
+  color: #ffd700;
+  font-size: 14px;
+}
+
+.title {
+  font-size: 26px;
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+.highlight {
+  background: #ffd700;
+  color: #000;
+  padding: 12px;
+  border-radius: 12px;
+  font-weight: bold;
+  margin: 15px 0;
+}
+
+.tagline {
+  font-size: 15px;
+  opacity: 0.9;
+}
+
+.trainer {
+  margin-top: 10px;
+  font-size: 16px;
+}
+
+.timer {
+  font-size: 32px;
+  margin: 20px 0;
+  letter-spacing: 2px;
+  font-weight: bold;
+}
+
+.labels {
+  font-size: 12px;
+  opacity: 0.7;
+}
+
+.info {
+  margin-top: 15px;
+  font-size: 15px;
+}
+
+.zoom {
+  margin-top: 20px;
+  background: #ffffff;
+  color: #000;
+  padding: 15px;
+  border-radius: 12px;
+  font-weight: bold;
+}
+
+.zoom a {
+  display: block;
+  margin-top: 10px;
+  background: #2d8cff;
+  color: white;
+  padding: 12px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.contact {
+  margin-top: 20px;
+  font-size: 15px;
+}
+
+.contact a {
+  color: #ffd700;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.footer {
+  margin-top: 10px;
+  font-size: 13px;
+  opacity: 0.8;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+  <div class="small">AK Rasak Presents</div>
+
+  <div class="title">Skill-Building Series – Session 05</div>
+
+  <div class="highlight">
+    FROM AGENT → TRUSTED ADVISOR
+  </div>
+
+  <div class="tagline">
+    Build Trust. Win Clients. Earn Referrals.
+  </div>
+
+  <div class="trainer">
+    <strong>AK Rasak</strong><br>
+    MDRT Advisor | Trainer
+  </div>
+
+  <div id="timer" class="timer"></div>
+  <div class="labels">Days : Hours : Minutes : Seconds</div>
+
+  <div class="info">
+    📅 21 April 2026 | 7:45 PM
+  </div>
+
+  <!-- Add to Calendar -->
+  <a href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Rasak+Training+Session&dates=20260421T141500Z/20260421T154500Z"
+     target="_blank"
+     style="display:block;margin-top:10px;color:#ffd700;">
+    📅 Add to Calendar
+  </a>
+
+  <div class="zoom">
+    Live on Zoom<br>
+    Meeting ID: 850 0075 6418
+
+    <a id="joinBtn" href="https://us06web.zoom.us/j/85000756418">
+      Join Zoom Meeting
+    </a>
+  </div>
+
+  <div class="contact">
+    📞 Sales: 
+    <a href="tel:9846220955" onclick="return confirm('Call 9846220955?')">9846220955</a><br>
+    📞 Support: 
+    <a href="tel:9846510955" onclick="return confirm('Call 9846510955?')">9846510955</a>
+  </div>
+
+  <div class="footer">
+    Be Ready. Be On Time.
+  </div>
+
+</div>
+
+<script>
+var countDownDate = new Date("Apr 21, 2026 19:45:00").getTime();
+
+var x = setInterval(function() {
+
+  var now = new Date().getTime();
+  var distance = countDownDate - now;
+
+  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+  document.getElementById("timer").innerHTML =
+    ("0" + days).slice(-2) + " : " +
+    ("0" + hours).slice(-2) + " : " +
+    ("0" + minutes).slice(-2) + " : " +
+    ("0" + seconds).slice(-2);
+
+  // Last 10 minutes change button
+  if (distance <= 10 * 60 * 1000 && distance > 0) {
+    var btn = document.getElementById("joinBtn");
+    btn.innerText = "🚀 Join Now";
+    btn.style.background = "#28a745";
+  }
+
+  // When time ends
+  if (distance < 0) {
+    clearInterval(x);
+    document.getElementById("timer").innerHTML = "Joining...";
+    setTimeout(function(){
+      window.location.href = "https://us06web.zoom.us/j/85000756418";
+    }, 1000);
+  }
+
+}, 1000);
+</script>
+
+</body>
+</html>
