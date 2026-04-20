@@ -1,208 +1,186 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Rasak Training Countdown</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<style>
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  background: linear-gradient(135deg, #0f2a5f, #1e3c8a);
-  color: white;
-  text-align: center;
-}
+  <title>Skill-Building Series – Session 05</title>
 
-.container {
-  max-width: 420px;
-  margin: 20px auto;
-  padding: 20px;
-  background: rgba(255,255,255,0.05);
-  border-radius: 20px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
-}
+  <!-- Open Graph -->
+  <meta property="og:title" content="Skill-Building Series – Session 05">
+  <meta property="og:description" content="From Agent to Trusted Advisor | Join Live on 21 April, 7:45 PM">
+  <meta property="og:image" content="https://rasaktraining.github.io/countdown/preview.jpg">
+  <meta property="og:url" content="https://rasaktraining.github.io/countdown/">
+  <meta property="og:type" content="website">
 
-.small {
-  color: #ffd700;
-  font-size: 14px;
-}
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Skill-Building Series – Session 05">
+  <meta name="twitter:description" content="Join Live Training on Zoom">
+  <meta name="twitter:image" content="https://rasaktraining.github.io/countdown/preview.jpg">
 
-.title {
-  font-size: 26px;
-  font-weight: bold;
-  margin: 10px 0;
-}
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #1e3c72, #2a5298);
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
 
-.highlight {
-  background: #ffd700;
-  color: #000;
-  padding: 12px;
-  border-radius: 12px;
-  font-weight: bold;
-  margin: 15px 0;
-}
+    .container {
+      max-width: 600px;
+      margin: auto;
+    }
 
-.tagline {
-  font-size: 15px;
-  opacity: 0.9;
-}
+    h1 {
+      font-size: 30px;
+    }
 
-.trainer {
-  margin-top: 10px;
-  font-size: 16px;
-}
+    .highlight {
+      background: #ffc107;
+      color: #000;
+      padding: 12px 20px;
+      border-radius: 30px;
+      font-weight: bold;
+      margin: 15px 0;
+      display: inline-block;
+    }
 
-.timer {
-  font-size: 32px;
-  margin: 20px 0;
-  letter-spacing: 2px;
-  font-weight: bold;
-}
+    .date {
+      margin: 10px 0;
+      font-size: 18px;
+    }
 
-.labels {
-  font-size: 12px;
-  opacity: 0.7;
-}
+    .countdown {
+      font-size: 26px;
+      margin: 20px 0;
+      font-weight: bold;
+    }
 
-.info {
-  margin-top: 15px;
-  font-size: 15px;
-}
+    .btn {
+      display: block;
+      background: #007bff;
+      color: white;
+      padding: 14px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+      margin: 15px auto;
+      width: 80%;
+    }
 
-.zoom {
-  margin-top: 20px;
-  background: #ffffff;
-  color: #000;
-  padding: 15px;
-  border-radius: 12px;
-  font-weight: bold;
-}
+    .zoom-box {
+      background: #ffffff;
+      color: #000;
+      padding: 15px;
+      border-radius: 12px;
+      margin-top: 20px;
+    }
 
-.zoom a {
-  display: block;
-  margin-top: 10px;
-  background: #2d8cff;
-  color: white;
-  padding: 12px;
-  border-radius: 10px;
-  text-decoration: none;
-  font-size: 16px;
-}
+    .zoom-link {
+      word-break: break-all;
+      color: #007bff;
+      font-size: 14px;
+    }
 
-.contact {
-  margin-top: 20px;
-  font-size: 15px;
-}
+    .copy-btn {
+      margin-top: 10px;
+      background: #28a745;
+      color: white;
+      padding: 8px 15px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
 
-.contact a {
-  color: #ffd700;
-  text-decoration: none;
-  font-weight: bold;
-}
+    .contact {
+      margin-top: 20px;
+    }
 
-.footer {
-  margin-top: 10px;
-  font-size: 13px;
-  opacity: 0.8;
-}
-</style>
+    .small {
+      margin-top: 10px;
+      opacity: 0.8;
+    }
+  </style>
 </head>
 
 <body>
+  <div class="container">
 
-<div class="container">
+    <p>AK Rasak Presents</p>
 
-  <div class="small">AK Rasak Presents</div>
+    <h1>Skill-Building Series – Session 05</h1>
 
-  <div class="title">Skill-Building Series – Session 05</div>
+    <div class="highlight">
+      FROM AGENT → TRUSTED ADVISOR
+    </div>
 
-  <div class="highlight">
-    FROM AGENT → TRUSTED ADVISOR
-  </div>
+    <div class="date">
+      📅 21 April 2026 | 7:45 PM
+    </div>
 
-  <div class="tagline">
-    Build Trust. Win Clients. Earn Referrals.
-  </div>
+    <div id="countdown" class="countdown">
+      Loading...
+    </div>
 
-  <div class="trainer">
-    <strong>AK Rasak</strong><br>
-    MDRT Advisor | Trainer
-  </div>
-
-  <div id="timer" class="timer"></div>
-  <div class="labels">Days : Hours : Minutes : Seconds</div>
-
-  <div class="info">
-    📅 21 April 2026 | 7:45 PM
-  </div>
-
-  <!-- Add to Calendar -->
-  <a href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Rasak+Training+Session&dates=20260421T141500Z/20260421T154500Z"
-     target="_blank"
-     style="display:block;margin-top:10px;color:#ffd700;">
-    📅 Add to Calendar
-  </a>
-
-  <div class="zoom">
-    Live on Zoom<br>
-    Meeting ID: 850 0075 6418
-
-    <a id="joinBtn" href="https://us06web.zoom.us/j/85000756418">
+    <!-- Button -->
+    <a class="btn" href="https://us06web.zoom.us/j/85000756418" target="_blank">
       Join Zoom Meeting
     </a>
+
+    <!-- Zoom Details -->
+    <div class="zoom-box">
+      <strong>Zoom Meeting Link:</strong><br>
+      <div id="zoomLink" class="zoom-link">
+        https://us06web.zoom.us/j/85000756418
+      </div>
+
+      <button class="copy-btn" onclick="copyLink()">Copy Link</button>
+
+      <p><strong>Meeting ID:</strong> 850 0075 6418</p>
+    </div>
+
+    <div class="contact">
+      📞 Sales: 9846220955<br>
+      📞 Support: 9846510955
+    </div>
+
+    <div class="small">
+      Be Ready. Be On Time.
+    </div>
+
   </div>
 
-  <div class="contact">
-    📞 Sales: 
-    <a href="tel:9846220955" onclick="return confirm('Call 9846220955?')">9846220955</a><br>
-    📞 Support: 
-    <a href="tel:9846510955" onclick="return confirm('Call 9846510955?')">9846510955</a>
-  </div>
+  <!-- Countdown -->
+  <script>
+    const targetDate = new Date("April 21, 2026 19:45:00").getTime();
 
-  <div class="footer">
-    Be Ready. Be On Time.
-  </div>
+    setInterval(function() {
+      const now = new Date().getTime();
+      const diff = targetDate - now;
 
-</div>
+      if (diff < 0) {
+        document.getElementById("countdown").innerHTML = "Session Started!";
+        return;
+      }
 
-<script>
-var countDownDate = new Date("Apr 21, 2026 19:45:00").getTime();
+      const d = Math.floor(diff / (1000 * 60 * 60 * 24));
+      const h = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const m = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+      const s = Math.floor((diff % (1000 * 60)) / 1000);
 
-var x = setInterval(function() {
-
-  var now = new Date().getTime();
-  var distance = countDownDate - now;
-
-  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-  document.getElementById("timer").innerHTML =
-    ("0" + days).slice(-2) + " : " +
-    ("0" + hours).slice(-2) + " : " +
-    ("0" + minutes).slice(-2) + " : " +
-    ("0" + seconds).slice(-2);
-
-  // Last 10 minutes change button
-  if (distance <= 10 * 60 * 1000 && distance > 0) {
-    var btn = document.getElementById("joinBtn");
-    btn.innerText = "🚀 Join Now";
-    btn.style.background = "#28a745";
-  }
-
-  // When time ends
-  if (distance < 0) {
-    clearInterval(x);
-    document.getElementById("timer").innerHTML = "Joining...";
-    setTimeout(function(){
-      window.location.href = "https://us06web.zoom.us/j/85000756418";
+      document.getElementById("countdown").innerHTML =
+        d + "d : " + h + "h : " + m + "m : " + s + "s";
     }, 1000);
-  }
 
-}, 1000);
-</script>
+    function copyLink() {
+      const link = document.getElementById("zoomLink").innerText;
+      navigator.clipboard.writeText(link);
+      alert("Zoom link copied!");
+    }
+  </script>
 
 </body>
 </html>
