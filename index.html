@@ -6,115 +6,85 @@
 
 <title>Skill-Building Series – Session 05</title>
 
-<!-- WhatsApp Preview -->
+<!-- Open Graph for WhatsApp Preview -->
 <meta property="og:title" content="Skill-Building Series – Session 05">
 <meta property="og:description" content="From Agent to Trusted Advisor | 21 April | 7:45 PM">
-<meta property="og:image" content="https://rasaktraining.github.io/countdown/preview.jpg">
+<meta property="og:image" content="preview.jpg">
 <meta property="og:url" content="https://rasaktraining.github.io/countdown/">
-<meta property="og:type" content="website">
 
 <style>
-body {
+body{
     margin:0;
-    font-family: Arial, sans-serif;
-    background: linear-gradient(135deg,#1f3c73,#2a5298);
+    font-family:Arial, sans-serif;
+    background:linear-gradient(135deg,#1e3c72,#2a5298);
     color:white;
     text-align:center;
 }
 
-.container {
+.container{
+    padding:20px;
     max-width:500px;
     margin:auto;
-    padding:20px;
 }
 
-.tag {
-    background:#ffc107;
+h1{
+    font-size:28px;
+}
+
+.highlight{
+    background:#ffcc00;
     color:black;
-    padding:12px;
-    border-radius:25px;
+    padding:10px;
+    border-radius:30px;
     font-weight:bold;
     margin:15px 0;
+    display:inline-block;
 }
 
-.countdown {
-    display:flex;
-    justify-content:center;
-    gap:10px;
-    margin:20px 0;
-}
-
-.time-box {
-    background: rgba(255,255,255,0.1);
-    padding:15px;
-    border-radius:10px;
-    width:70px;
-    transition:0.3s;
-}
-
-.time-box span {
-    font-size:22px;
+.countdown{
+    font-size:32px;
     font-weight:bold;
+    margin:20px 0;
+    letter-spacing:2px;
+}
+
+.btn{
     display:block;
-}
-
-.time-box small {
-    font-size:12px;
-}
-
-.time-box:hover {
-    transform: scale(1.1);
-    background:#ffc107;
-    color:black;
-}
-
-.button {
-    display:block;
-    background:#007bff;
-    color:white;
+    margin:10px auto;
     padding:14px;
-    border-radius:8px;
+    border-radius:10px;
     text-decoration:none;
-    margin:10px 0;
-    font-size:18px;
+    font-weight:bold;
+    color:white;
 }
 
-.whatsapp {
+.join{
+    background:#007bff;
+}
+
+.call{
+    background:#28a745;
+}
+
+.whatsapp{
     background:#25D366;
 }
 
-.box {
+.share{
+    background:#ff9800;
+}
+
+.card{
     background:white;
     color:black;
     padding:15px;
-    border-radius:10px;
+    border-radius:15px;
     margin-top:20px;
 }
 
-.copy-btn {
-    background:#28a745;
-    color:white;
-    padding:10px;
-    border:none;
-    border-radius:6px;
-    margin-top:10px;
-    cursor:pointer;
-}
-
-.toast {
-    visibility:hidden;
-    background:#28a745;
-    color:#fff;
-    padding:10px;
-    border-radius:6px;
-    position:fixed;
-    bottom:20px;
-    left:50%;
-    transform:translateX(-50%);
-}
-
-.toast.show {
-    visibility:visible;
+.small{
+    font-size:14px;
+    opacity:0.8;
 }
 </style>
 </head>
@@ -123,72 +93,78 @@ body {
 
 <div class="container">
 
-<h2>AK Rasak Presents</h2>
+<h3>AK Rasak Presents</h3>
+
 <h1>Skill-Building Series – Session 05</h1>
 
-<div class="tag">FROM AGENT → TRUSTED ADVISOR</div>
+<div class="highlight">
+FROM AGENT → TRUSTED ADVISOR
+</div>
 
 <p>📅 21 April 2026 | 7:45 PM</p>
 
-<!-- Animated Countdown -->
-<div class="countdown">
-    <div class="time-box"><span id="days">0</span><small>Days</small></div>
-    <div class="time-box"><span id="hours">0</span><small>Hours</small></div>
-    <div class="time-box"><span id="minutes">0</span><small>Min</small></div>
-    <div class="time-box"><span id="seconds">0</span><small>Sec</small></div>
-</div>
+<div id="countdown" class="countdown">Loading...</div>
 
-<!-- Buttons -->
-<a href="https://us06web.zoom.us/j/85000756418" class="button" target="_blank">
+<!-- JOIN BUTTON -->
+<a href="https://us06web.zoom.us/j/85000756418" class="btn join">
 Join Zoom Meeting
 </a>
 
-<a href="#" class="button whatsapp" onclick="shareWhatsApp()">
-Share on WhatsApp
+<!-- CONTACT BUTTONS -->
+<a href="tel:+919846220955" class="btn call">
+📞 Call Sales
 </a>
 
-<div class="box">
-<b>Zoom Meeting Link:</b><br>
-<span id="zoomLink">https://us06web.zoom.us/j/85000756418</span><br>
+<a href="https://wa.me/919846220955" class="btn whatsapp">
+💬 Chat on WhatsApp
+</a>
 
-<button class="copy-btn" onclick="copyLink()">Copy Link</button>
+<!-- SHARE BUTTON -->
+<a href="#" onclick="shareWhatsApp()" class="btn share">
+📤 Share on WhatsApp
+</a>
 
-<p><b>Meeting ID:</b> 850 0075 6418</p>
+<!-- INFO CARD -->
+<div class="card">
+    <p><b>Zoom Link:</b></p>
+    <p class="small">https://us06web.zoom.us/j/85000756418</p>
+
+    <p><b>Meeting ID:</b> 850 0075 6418</p>
+
+    <p><b>Support:</b> 9846510955</p>
 </div>
 
-<p>📞 Sales: 9846220955</p>
-<p>📞 Support: 9846510955</p>
+<p class="small">Be Ready. Be On Time.</p>
 
 </div>
-
-<div id="toast" class="toast">Zoom link copied!</div>
 
 <script>
-// Countdown
-var target = new Date("April 21, 2026 19:45:00").getTime();
+// COUNTDOWN TIMER
+let targetDate = new Date("April 21, 2026 19:45:00").getTime();
 
 setInterval(function(){
-    var now = new Date().getTime();
-    var diff = target - now;
+    let now = new Date().getTime();
+    let distance = targetDate - now;
 
-    document.getElementById("days").innerHTML = Math.floor(diff/(1000*60*60*24));
-    document.getElementById("hours").innerHTML = Math.floor((diff%(1000*60*60*24))/(1000*60*60));
-    document.getElementById("minutes").innerHTML = Math.floor((diff%(1000*60*60))/(1000*60));
-    document.getElementById("seconds").innerHTML = Math.floor((diff%(1000*60))/1000);
+    if(distance < 0){
+        document.getElementById("countdown").innerHTML = "Session Started";
+        return;
+    }
+
+    let d = Math.floor(distance / (1000*60*60*24));
+    let h = Math.floor((distance % (1000*60*60*24)) / (1000*60*60));
+    let m = Math.floor((distance % (1000*60*60)) / (1000*60));
+    let s = Math.floor((distance % (1000*60)) / 1000);
+
+    document.getElementById("countdown").innerHTML =
+        d+"d : "+h+"h : "+m+"m : "+s+"s";
+
 },1000);
 
-// Copy link
-function copyLink(){
-    navigator.clipboard.writeText(document.getElementById("zoomLink").innerText);
-    let t = document.getElementById("toast");
-    t.className="toast show";
-    setTimeout(()=>t.className="toast",2000);
-}
-
-// WhatsApp Share
+// WHATSAPP SHARE (TinyURL)
 function shareWhatsApp(){
     let text = encodeURIComponent(
-        "Join this powerful session:\nFrom Agent to Trusted Advisor\n21 April | 7:45 PM\n👇\nhttps://tinyurl.com/43j6hkvu/"
+        "Join this powerful session:\nFrom Agent to Trusted Advisor\n21 April | 7:45 PM\n👇\nhttps://tinyurl.com/43j6hkvu"
     );
     window.open("https://wa.me/?text="+text,"_blank");
 }
